@@ -22,7 +22,7 @@ def run_optimized(actions, size=20, budget=500):
     actions = {key: value for key, value in list(actions.items())[:size]}
     actions_by_calculated_profit = sorted(
         actions.items(),
-        key=lambda x: float(x[1]["profit"]) / float(x[1]["price"]),
+        key=lambda x: float(x[1]["profit"]) * float(x[1]["price"]),
         reverse=True,
     )
 
